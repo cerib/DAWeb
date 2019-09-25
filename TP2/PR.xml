@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE relatório SYSTEM "file:/C:/Users/C/desktop/tpc2_1/pr_dtd.dtd">
+<relatório>
+    <título>TP2 relatório</título>
+    <descrição>Respostas à <b>primeira parte do TPC2</b> e aos <b>exercícios 6 e 7 da ficha 3</b>, que são a segunda parte do TPC2</descrição>
+    <cabeçalho>
+        <datas>
+            <data>
+                <descrição>Inicio: </descrição>
+                <valor>25/09/2019</valor>
+            </data>
+            <data>
+                <descrição>Fim: </descrição>
+                <valor>25/09/2019</valor>
+            </data>
+        </datas>
+        <supervisor href="http://www.di.uminho.pt/~jcr">José Carlos Ramalho</supervisor>
+    </cabeçalho>
+    <workteam>
+        <elemento-equipa>
+            <nome>César Augusto</nome>
+            <número>A79014</número>
+            <email>a79014@alunos.uminho.pt</email>
+            <links>
+                <link href="https://github.com/cerib/DAWeb">Github</link>
+            </links>
+        </elemento-equipa>
+    </workteam>
+    <resumo>
+        <paragrafos>
+            <p><b>Ficha 3</b></p>
+            <p><b>6.a)</b> //ARQELEM[TIPO/@ASSUNTO="arqueossitio"][CONCEL[contains(text(),"Amares")]]/IDENTI</p>
+            <p><b>6.b)</b> //ARQELEM[TIPO/@ASSUNTO="arqueossitio"]/CONCEL</p>
+            <p><b>6.c)</b> //ARQELEM[TIPO/@ASSUNTO="arqueossitio"][CONCEL[contains(text(), "Montalegre")]]/DESCRI</p>
+            <p><b>7)</b> Ficheiros disponíveis na pasta <i>ficha3_ficheiros</i></p>
+        </paragrafos>
+    </resumo>
+    <rodapé>
+        <link href="www.google.pt">Google</link>
+    </rodapé>
+</relatório>

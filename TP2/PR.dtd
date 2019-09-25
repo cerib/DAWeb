@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT relatório (título, descrição?, cabeçalho, workteam, resumo, rodapé) >
+<!ELEMENT título (#PCDATA)>
+
+<!ELEMENT cabeçalho (datas, supervisor) >
+<!ELEMENT datas (data, data?) >
+<!ELEMENT data (descrição?, valor) >
+<!ELEMENT descrição (#PCDATA | b | i)* >
+<!ELEMENT valor (#PCDATA) >
+<!ELEMENT supervisor (#PCDATA) >
+<!ATTLIST supervisor
+    href CDATA #REQUIRED>
+
+<!ELEMENT workteam (elemento-equipa+) >
+<!ELEMENT elemento-equipa (nome, número, email, links?) >
+<!ELEMENT  nome (#PCDATA) >
+<!ELEMENT número (#PCDATA) >
+<!ELEMENT email (#PCDATA) >
+<!ELEMENT links (link+) >
+<!ELEMENT link (#PCDATA) >
+<!ATTLIST link
+    href CDATA #REQUIRED>
+
+<!ELEMENT resumo (paragrafos) >
+<!ELEMENT paragrafos (p+) >
+<!ELEMENT p (#PCDATA | b | i)* >
+<!ELEMENT b (#PCDATA) >
+<!ELEMENT i (#PCDATA) >
+<!ELEMENT rodapé (p | link)+ >
