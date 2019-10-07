@@ -17,6 +17,15 @@
         </worker>
     </workteam>
     <abstract>
-        <p>Hello <b>brave</b> <b><i>new</i></b> world</p>
+        <p>Resolução dos tpc 3. Nestes TPC foi-nos pedido para fazermos um XSL que aplicado a este
+            documento XML, o transforme numa página HTML</p>
+        <p>Além disso foi pedido para fazer um XSL que transforme o XML dos arqueossíteos numa (ou
+            várias) páginas HTML</p>
     </abstract>
+
+    <deliverables>
+        <deliverable path="./PR.xml">PR.xml</deliverable>
+        <deliverable path="./PR.xsl">PR.xsl</deliverable>
+        <deliverable path="./PR.html">PR.html</deliverable>
+    </deliverables>
 </pr>
