@@ -29,22 +29,7 @@
             <a name="{generate-id()}"/>
             <a href="arqueo-{generate-id()}.html"><xsl:value-of select="IDENTI"/></a>
         </li>
-        <xsl:variable name="identi" select="IDENTI"/>
-        <xsl:result-document href="html/arqueo-{generate-id()}.html">
-            <html>
-                <head>
-                    <title>Arqueo-sítios</title>
-                    <meta charset="UTF8"/>
-                </head>
-                <body>
-                    <xsl:apply-templates mode="in-cidade"/>
-                </body>
-            </html>
-        </xsl:result-document>
     </xsl:template>
     
-    <xsl:template match="ARQELEM" mode="in-cidade">
-        https://stackoverflow.com/questions/2167444/xsl-passing-variables-between-templates
-        <p><xsl:value-of select="$identi"/></p>
-    </xsl:template>
+
 </xsl:stylesheet>
