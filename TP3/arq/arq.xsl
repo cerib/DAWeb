@@ -6,7 +6,7 @@
     
     <xsl:output method="html" encoding="UTF-8" indent="yes"/>
     <xsl:template match="/">
-        <xsl:result-document href="html/index.html">
+        <xsl:result-document href="index.html">
             <html>
                 <head>
                     <title>Arqueo-sítios</title>
@@ -31,5 +31,84 @@
         </li>
     </xsl:template>
     
-
+    <xsl:template match="ARQELEM">
+        <xsl:result-document href="arqueo-{generate-id()}.html">
+            <html>
+                <head>
+                    <title>
+                        <xsl:value-of select="IDENTI"/>
+                    </title>
+                    <meta charset="UTF-8"/>
+                </head>
+                <body>
+                    <header>
+                        <h2>
+                            <xsl:value-of select="IDENTI"/> - (<xsl:value-of
+                                select="DESCRI"/>) 
+                        </h2>
+                        <table>
+                            <tr>
+                                <td>
+                                    <b>Lugar: </b>
+                                    <xsl:value-of select="LUGAR"/>
+                                </td>
+                                <td>
+                                    <b>Freguesia: </b>
+                                    <xsl:value-of select="FREGUE"/>
+                                </td>
+                                <td>
+                                    <b>Concelho: </b>
+                                    <xsl:value-of select="CONCEL"/>
+                                </td>
+                            </tr>
+                        </table>
+                        <p>
+                            <b>Coordenadas (<xsl:value-of select="CODADM"/>): </b>
+                            <xsl:value-of select="LATITU"/>Norte - <xsl:value-of select="LONGIT"
+                            />Oeste - <xsl:value-of select="ALTITU"/>
+                        </p>
+                    </header>
+                    <p>
+                        <b>Accesso: </b>
+                        <xsl:value-of select="ACESSO"/>
+                        
+                    </p>
+                        
+                    <p>
+                        <b>Quadro: </b>
+                        <xsl:value-of select="QUADRO"/>
+                    </p>
+                    <h4>
+                        <b>Descrição do arqueossítio: </b>
+                    </h4>
+                    <p>
+                        <xsl:value-of select="DESARQ"/>
+                    </p>
+                    <p>
+                        <b>Intérprete: </b>
+                        <xsl:value-of select="INTERP"/>
+                    </p>
+                    <p>
+                        <b>Depósito: </b>
+                        <xsl:value-of select="DEPOSI"/>
+                    </p>
+                    <p>
+                        <b>Bibliografia: </b>
+                    </p>
+                    <ul>
+                        <xsl:for-each select="BIBLIO">
+                            <li>
+                                <xsl:value-of select="."/>
+                            </li>    
+                        </xsl:for-each>                              
+                    </ul>
+                    <p><xsl:value-of select="AUTOR"/> - <xsl:value-of select="DATA"/></p>
+                    <h3>
+                        <a href="index.html#{generate-id()}">Retroceder</a>
+                    </h3>
+                </body>
+            </html>
+        </xsl:result-document>
+        <xsl:apply-templates/>
+    </xsl:template>
 </xsl:stylesheet>
