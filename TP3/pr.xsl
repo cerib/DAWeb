@@ -34,13 +34,28 @@
                 <xsl:when test="subtitle">
                     <tr>
                         <td><b>Subtitle: </b> <xsl:value-of select="subtitle"/></td>
-                        <td><b>Supervisor: </b> <xsl:value-of select="supervisor"/></td>
+                        <xsl:choose>
+                            <xsl:when test="supervisor/@homepage">
+                                <td><b>Supervisor: </b> <a href="{//supervisor/@homepage}"><xsl:value-of select="supervisor"/></a></td>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <td><b>Supervisor: </b> <xsl:value-of select="supervisor"/></td>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                        
                     </tr>
                 </xsl:when>
                 <xsl:otherwise>
                     <tr>
                         <td></td>
-                        <td><b>Supervisor: </b> <xsl:value-of select="supervisor"/></td>
+                        <xsl:choose>
+                            <xsl:when test="supervisor/@homepage">
+                                <td><b>Supervisor: </b> <a href="{//supervisor/@homepage}"><xsl:value-of select="supervisor"/></a></td>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <td><b>Supervisor: </b> <xsl:value-of select="supervisor"/></td>
+                            </xsl:otherwise>
+                        </xsl:choose>
                     </tr>
                 </xsl:otherwise>
             </xsl:choose>
@@ -58,9 +73,60 @@
                 </li>
             </xsl:for-each>  
         </ul>
+        <hr/>
+    </xsl:template>
+    
+    <!--
+    <xsl:template match="abstract/p/xref">
+        <a href="#">link</a>
     </xsl:template>
     
     <xsl:template match="abstract/p">
         <p><xsl:copy-of select = "." /></p>
     </xsl:template>
+    !-->
+    <xsl:template match="abstract/p">
+        <p><xsl:apply-templates/></p>
+    </xsl:template>
+    
+    <xsl:template match="xref">
+        <a href="{./@url}"><xsl:value-of select="."/></a>
+    </xsl:template>
+    
+    <xsl:template match="b">
+        <b><xsl:copy-of select = "." /></b>
+    </xsl:template>
+    
+    <xsl:template match="i">
+        <i><xsl:copy-of select = "." /></i>
+    </xsl:template>
+    
+    <xsl:template match="u">
+        <u><xsl:copy-of select = "." /></u>
+    </xsl:template>
+    
+    <xsl:template match="deliverables">
+        <hr/>
+        <ul>
+            <xsl:for-each select="deliverable">
+                <li>
+                    <a href="{./@path}"><xsl:value-of select="."/></a>
+                </li>
+            </xsl:for-each>
+        </ul>
+    </xsl:template>
+    
+    
 </xsl:stylesheet>
+
+
+
+
+
+
+
+
+
+
+
+
