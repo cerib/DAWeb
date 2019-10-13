@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/C:/Users/C/Desktop/DAWeb/TP3/pr.dtd">
+<pr>
+    <metadata>
+        <keyname>MIEI DWeb1920</keyname>
+        <title>TP4</title>
+        <supervisor homepage="http://www4.di.uminho.pt/~jcr/">Prof. José Carlos Ramalho</supervisor>
+        <bdate>2019/10/08</bdate>
+        <edate>2019/10/13</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>A79014</identifier>
+            <name>César Ribeiro</name>
+            <email>a79014@alunos.uminho.pt</email>
+            <git>https://www.github.com/cerib/DAWeb/</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>Resolução dos tpc 4. Nestes TPC foi-nos pedido para dividir o ficheiro dos arqueossítios em vários ficheiros xml, um ficheiro para cada arquelem. O professor acabou por disponibilizar a versão dele, o
+        que me levou a abandonar a minha e a modificar o projecto para ser compatível com a versão do professor, no entanto no histórico de commits ainda é possível aceder à minha versão</p>
+        <p><b>A parte principal do TPC foi construir um servidor de ficheiros xml básico em Node.js</b> - e os ficheiros xml devem ser convertidos para html antes do utilizador o visualizar. Sendo assim o servidor precisa de ter
+        carregado o ficheiro xml2html.xsl antes de enviar os ficheiros xml para o browser do utilizador.</p>
+        <p>Quanto ao funcionamento, como a leitura de ficheiros não é síncrona, decidi usar <i>Promises</i> para garantir que o ficheiro xsl estava carregado antes de o servidor começar a ouvir a porta 7777</p>
+    </abstract>
+
+    <deliverables>
+        <deliverable path="./PR.xml">PR.xml</deliverable>
+        <deliverable path="./PR.html">PR.html</deliverable>
+        <deliverable path="./PR.xsl">PR.xsl</deliverable>
+        <deliverable path="./arq2html.xsl">arq2html.xsl</deliverable>
+        <deliverable path="./xml-split.xsl">xml-split.xsl</deliverable>
+        <deliverable path="./server.js">server.js (ficheiro servidor)</deliverable>
+        <deliverable path="./dataset">Pasta com os ficheiros xml</deliverable>
+    </deliverables>
+</pr>

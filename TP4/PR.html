@@ -1,0 +1,73 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Project Record</title>
+      <meta charset="UTF8">
+   </head>
+   <body>
+      
+      <h1>MIEI DWeb1920 - TP4</h1>
+      <table>
+         <tr>
+            <td><b>Key name: </b>MIEI DWeb1920
+            </td>
+            <td><b>Begin date: </b>2019/10/08
+            </td>
+         </tr>
+         <tr>
+            <td><b>Title: </b>TP4
+            </td>
+            <td><b>End date: </b>2019/10/13
+            </td>
+         </tr>
+         <tr>
+            <td></td>
+            <td><b>Supervisor: </b><a href="http://www4.di.uminho.pt/~jcr/">Prof. José Carlos Ramalho</a></td>
+         </tr>
+      </table>
+      <hr>
+      
+      <ul>
+         <li>
+            <p>Nome: César Ribeiro</p>
+            <p>Número: A79014</p>
+            <p>Email: a79014@alunos.uminho.pt</p>
+            <p>Git: <a href="https://www.github.com/cerib/DAWeb/">https://www.github.com/cerib/DAWeb/</a></p>
+         </li>
+      </ul>
+      <hr>
+      
+      
+      <p>Resolução dos tpc 4. Nestes TPC foi-nos pedido para dividir o ficheiro dos arqueossítios
+         em vários ficheiros xml, um ficheiro para cada arquelem. O professor acabou por disponibilizar
+         a versão dele, o
+         que me levou a abandonar a minha e a modificar o projecto para ser compatível com
+         a versão do professor, no entanto no histórico de commits ainda é possível aceder
+         à minha versão
+      </p>
+      
+      <p><b><b>A parte principal do TPC foi construir um servidor de ficheiros xml básico em Node.js</b></b> - e os ficheiros xml devem ser convertidos para html antes do utilizador o visualizar.
+         Sendo assim o servidor precisa de ter
+         carregado o ficheiro xml2html.xsl antes de enviar os ficheiros xml para o browser
+         do utilizador.
+      </p>
+      
+      <p>Quanto ao funcionamento, como a leitura de ficheiros não é síncrona, decidi usar <i><i>Promises</i></i> para garantir que o ficheiro xsl estava carregado antes de o servidor começar a ouvir
+         a porta 7777
+      </p>
+      
+      
+      
+      <hr>
+      <ul>
+         <li><a href="./PR.xml">PR.xml</a></li>
+         <li><a href="./PR.html">PR.html</a></li>
+         <li><a href="./PR.xsl">PR.xsl</a></li>
+         <li><a href="./arq2html.xsl">arq2html.xsl</a></li>
+         <li><a href="./xml-split.xsl">xml-split.xsl</a></li>
+         <li><a href="./server.js">server.js (ficheiro servidor)</a></li>
+         <li><a href="./dataset">Pasta com os ficheiros xml</a></li>
+      </ul>
+      
+   </body>
+</html>
