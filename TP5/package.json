@@ -1,0 +1,33 @@
+{
+  "name": "tp5",
+  "version": "1.0.0",
+  "description": "César Augusto 2019-10-15",
+  "main": "server.js",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "jsonfile": "^5.0.0",
+    "pug": "^2.0.4",
+    "uuid": "^3.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cerib/DAWeb.git"
+  },
+  "keywords": [
+    "TP5",
+    "TPC",
+    "DWEB",
+    "WEB"
+  ],
+  "author": "César Ribeiro",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/cerib/DAWeb/issues"
+  },
+  "homepage": "https://github.com/cerib/DAWeb#readme"
+}

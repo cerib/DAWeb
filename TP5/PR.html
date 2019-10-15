@@ -1,0 +1,78 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Project Record</title>
+      <meta charset="UTF8">
+   </head>
+   <body>
+      
+      <h1>MIEI DWeb1920 - TP5</h1>
+      <table>
+         <tr>
+            <td><b>Key name: </b>MIEI DWeb1920
+            </td>
+            <td><b>Begin date: </b>2019/10/15
+            </td>
+         </tr>
+         <tr>
+            <td><b>Title: </b>TP5
+            </td>
+            <td><b>End date: </b>2019/10/15
+            </td>
+         </tr>
+         <tr>
+            <td></td>
+            <td><b>Supervisor: </b><a href="http://www4.di.uminho.pt/~jcr/">Prof. José Carlos Ramalho</a></td>
+         </tr>
+      </table>
+      <hr>
+      
+      <ul>
+         <li>
+            <p>Nome: César Ribeiro</p>
+            <p>Número: A79014</p>
+            <p>Email: a79014@alunos.uminho.pt</p>
+            <p>Git: <a href="https://www.github.com/cerib/DAWeb/">https://www.github.com/cerib/DAWeb/</a></p>
+         </li>
+      </ul>
+      <hr>
+      
+      
+      <p><b><b>Resolução do tpc 5</b></b>  - neste TPC foi pedido para criarmos uma "Single Page App", de lista de tarefas.
+      </p>
+      
+      <p>O objectivo é através do servidor em Node.js, e utilizando templates html feitas com
+         o 
+         módulo "pug", criar uma web app de lista de tarefas, sem o uso de múltiplas páginas
+         HTML. Assim, utilizei uma única template pug para isto, mais uma para quando acontece
+         algum erro. A template layout é 
+         apenas para evitar a reescrita de código
+      </p>
+      
+      <p><b><b>Extra:</b></b> além da opção de adicionar tarefas, também coloquei um botão que permite apagar a
+         tarefa da base de dados, desaparecendo a tarefa também da página.
+         Para isto ser possível, sempre que o utilizador cria uma tarefa nova, o servidor associa
+         de forma transparente um ID único a essa tarefa. Para apagar, usei um form para cada
+         row da tabela, esse form 
+         envia para o servidor o ID único da tarefa a apagar. Depois no servidor, o ficheiro
+         da BD (<i><i>tarefas.json</i></i>) é reescrito sem a tarefa apagada, com a ajuda de uma função <i><i>filter</i></i>, que 
+         deixa passar todas as tarefas que não tenham o ID da tarefa a apagar.
+      </p>
+      
+      
+      
+      <hr>
+      <ul>
+         <li><a href="./PR.xml">PR.xml</a></li>
+         <li><a href="./PR.html">PR.html</a></li>
+         <li><a href="./PR.xsl">PR.xsl</a></li>
+         <li><a href="./layouts">Pasta com os ficheiros pug (layouts)</a></li>
+         <li><a href="./stylesheets">Pasta com os ficheiros CSS (stylesheets)</a></li>
+         <li><a href="./package.json">package.json</a></li>
+         <li><a href="./package-lock.json">package-lock.json</a></li>
+         <li><a href="./server.js">server.js (ficheiro com o código do servidor)</a></li>
+         <li><a href="./tarefas.json">BD (tarefas.json - ficheiro JSON com as tarefas)</a></li>
+      </ul>
+      
+   </body>
+</html>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/C:/Users/C/Desktop/DAWeb/TP3/pr.dtd">
+<pr>
+    <metadata>
+        <keyname>MIEI DWeb1920</keyname>
+        <title>TP5</title>
+        <supervisor homepage="http://www4.di.uminho.pt/~jcr/">Prof. José Carlos Ramalho</supervisor>
+        <bdate>2019/10/15</bdate>
+        <edate>2019/10/15</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>A79014</identifier>
+            <name>César Ribeiro</name>
+            <email>a79014@alunos.uminho.pt</email>
+            <git>https://www.github.com/cerib/DAWeb/</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p><b>Resolução do tpc 5</b>  - neste TPC foi pedido para criarmos uma "Single Page App", de lista de tarefas.</p>
+        <p>O objectivo é através do servidor em Node.js, e utilizando templates html feitas com o 
+        módulo "pug", criar uma web app de lista de tarefas, sem o uso de múltiplas páginas HTML. Assim, utilizei uma única template pug para isto, mais uma para quando acontece algum erro. A template layout é 
+        apenas para evitar a reescrita de código</p>
+        <p><b>Extra:</b> além da opção de adicionar tarefas, também coloquei um botão que permite apagar a tarefa da base de dados, desaparecendo a tarefa também da página.
+        Para isto ser possível, sempre que o utilizador cria uma tarefa nova, o servidor associa de forma transparente um ID único a essa tarefa. Para apagar, usei um form para cada row da tabela, esse form 
+        envia para o servidor o ID único da tarefa a apagar. Depois no servidor, o ficheiro da BD (<i>tarefas.json</i>) é reescrito sem a tarefa apagada, com a ajuda de uma função <i>filter</i>, que 
+       deixa passar todas as tarefas que não tenham o ID da tarefa a apagar.</p>
+    </abstract>
+
+    <deliverables>
+        <deliverable path="./PR.xml">PR.xml</deliverable>
+        <deliverable path="./PR.html">PR.html</deliverable>
+        <deliverable path="./PR.xsl">PR.xsl</deliverable>
+        <deliverable path="./layouts">Pasta com os ficheiros pug (layouts)</deliverable>
+        <deliverable path="./stylesheets">Pasta com os ficheiros CSS (stylesheets)</deliverable>
+        <deliverable path="./package.json">package.json</deliverable>
+        <deliverable path="./package-lock.json">package-lock.json</deliverable>
+        <deliverable path="./server.js">server.js (ficheiro com o código do servidor)</deliverable>
+        <deliverable path="./tarefas.json">BD (tarefas.json - ficheiro JSON com as tarefas)</deliverable>
+    </deliverables>
+</pr>
