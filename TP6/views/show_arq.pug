@@ -1,0 +1,22 @@
+extends layout
+block content
+  .w3-card-4.w3-margin
+    header.w3-container.w3-teal
+        h3 Mostrar/ Editar Arquivo Sonoro
+          .w3-container
+              label
+                b Músico
+              input.w3-input.w3-border(type='text' name='musico' value=arq.musico)
+              label
+                b Título 
+              input.w3-input.w3-border(type='text' name='tit' required value=arq.tit)
+              label
+                b Local 
+              input.w3-input.w3-border(type='text' name='local' value=arq.local)
+              label
+                b Província 
+              input.w3-input.w3-border(type='text' name='prov' value=arq.prov)
+              button.w3-button.w3-circle.w3-blue-grey(onclick=`actualizaItem(${arq.id})`) Actualizar
+    footer.w3-container.w3-teal
+      a(href="/") Voltar à Página Inicial
+      address Gerado por Arquivo Sonoro App
