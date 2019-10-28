@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr>
+<pr>
+    <metadata>
+        <keyname>MIEI DWeb1920</keyname>
+        <title>TP6</title>
+        <supervisor homepage="http://www4.di.uminho.pt/~jcr/">Prof. José Carlos Ramalho</supervisor>
+        <bdate>2019/10/22</bdate>
+        <edate>2019/10/29</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>A79014</identifier>
+            <name>César Ribeiro</name>
+            <email>a79014@alunos.uminho.pt</email>
+            <git>https://www.github.com/cerib/DAWeb/</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p><b>Resolução do tpc 6</b>  - neste TPC foi pedido para criarmos um server e fazer o CRUD de entradas numa "BD" em JSON de arquivos sonoros</p>
+        <p>Utilizei Express e Pug para fazer o exercício. Todos os arquivos existentes são mostrados na página inicial, juntamente com o formulário de submissão de 
+        um novo arquivo. Para visualizar ou editar um arquivo, basta clicar no link presente na linha da tabela, onde este se encontra.
+        Utilizo o módulo <b>uniqid</b> para criar IDs únicos, já que não existe nenhum campo no XML original que permita identificar unicamente cada arquivo.</p>
+        <p>Para a conversão de XML para JSON utilizei uma ferramenta online. Depois corri o script em Node.js "prepara_json.js" para colocar um ID único em cada arquivo, 
+            para que o meu servidor funcionasse correctamente com os arquivos pré existentes. No caso da inserção de um novo arquivo, o id é colocado de forma transparente 
+            para o utilizador.</p>
+    </abstract>
+
+    <deliverables>
+        <deliverable path="./PR.xml">PR.xml</deliverable>
+        <deliverable path="./PR.html">PR.html</deliverable>
+        <deliverable path="./PR.xsl">PR.xsl</deliverable>
+        <deliverable path="./ARQ_SERVER/arqs.json">Base de Dados</deliverable>
+        <deliverable path="./prepara_json.js">prepara_json.js - Ficheiro que coloca ID único em cada objecto Arq no ficheiro arqs.json</deliverable>
+        <deliverable path="./ARQ_SERVER">Pasta com os ficheiros do servidor</deliverable>
+    </deliverables>
+</pr>

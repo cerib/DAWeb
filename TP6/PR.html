@@ -1,0 +1,73 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Project Record</title>
+      <meta charset="UTF8">
+   </head>
+   <body>
+      
+      <h1>MIEI DWeb1920 - TP6</h1>
+      <table>
+         <tr>
+            <td><b>Key name: </b>MIEI DWeb1920
+            </td>
+            <td><b>Begin date: </b>2019/10/22
+            </td>
+         </tr>
+         <tr>
+            <td><b>Title: </b>TP6
+            </td>
+            <td><b>End date: </b>2019/10/29
+            </td>
+         </tr>
+         <tr>
+            <td></td>
+            <td><b>Supervisor: </b><a href="http://www4.di.uminho.pt/~jcr/">Prof. José Carlos Ramalho</a></td>
+         </tr>
+      </table>
+      <hr>
+      
+      <ul>
+         <li>
+            <p>Nome: César Ribeiro</p>
+            <p>Número: A79014</p>
+            <p>Email: a79014@alunos.uminho.pt</p>
+            <p>Git: <a href="https://www.github.com/cerib/DAWeb/">https://www.github.com/cerib/DAWeb/</a></p>
+         </li>
+      </ul>
+      <hr>
+      
+      
+      <p><b><b>Resolução do tpc 6</b></b>  - neste TPC foi pedido para criarmos um server e fazer o CRUD de entradas numa "BD"
+         em JSON de arquivos sonoros
+      </p>
+      
+      <p>Utilizei Express e Pug para fazer o exercício. Todos os arquivos existentes são mostrados
+         na página inicial, juntamente com o formulário de submissão de 
+         um novo arquivo. Para visualizar ou editar um arquivo, basta clicar no link presente
+         na linha da tabela, onde este se encontra.
+         Utilizo o módulo <b><b>uniqid</b></b> para criar IDs únicos, já que não existe nenhum campo no XML original que permita
+         identificar unicamente cada arquivo.
+      </p>
+      
+      <p>Para a conversão de XML para JSON utilizei uma ferramenta online. Depois corri o script
+         em Node.js "prepara_json.js" para colocar um ID único em cada arquivo, 
+         para que o meu servidor funcionasse correctamente com os arquivos pré existentes.
+         No caso da inserção de um novo arquivo, o id é colocado de forma transparente 
+         para o utilizador.
+      </p>
+      
+      
+      
+      <hr>
+      <ul>
+         <li><a href="./PR.xml">PR.xml</a></li>
+         <li><a href="./PR.html">PR.html</a></li>
+         <li><a href="./PR.xsl">PR.xsl</a></li>
+         <li><a href="./ARQ_SERVER/arqs.json">Base de Dados</a></li>
+         <li><a href="./prepara_json.js">prepara_json.js - Ficheiro que coloca ID único em cada objecto Arq no ficheiro arqs.json</a></li>
+         <li><a href="./ARQ_SERVER">Pasta com os ficheiros do servidor</a></li>
+      </ul>
+      
+   </body>
+</html>
