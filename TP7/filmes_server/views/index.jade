@@ -1,0 +1,45 @@
+extends layout
+block content
+  .w3-container.w3-margin
+    h1 Gestão de Filmes
+    .w3-card-4
+      header.w3-container.w3-teal
+        h3 Novo Filme
+          .w3-container
+            form.w3-container(action='/movie/new' method='POST')
+              label
+                b Título
+              input.w3-input.w3-border(type='text' name='title' required)
+              label
+                b Ano 
+              input.w3-input.w3-border(type='number' name='year' required)
+              label
+                b Elenco (separar por vírgulas)
+              input.w3-input.w3-border(type='text' name='cast')
+              label
+                b Géneros (separar por vírgulas)
+              input.w3-input.w3-border(type='text' name='genres')
+              input.w3-btn.w3-blue-grey(type='submit' value='Enviar')
+        .w3-card-4
+            table.w3-table-all.w3-text-black
+                tr
+                    th Título
+                    th Ano
+                    th Elenco
+                    th Géneros
+                    th Opções
+                each a in movies
+                    tr
+                      td
+                        a(href=`/movie/`+a.id)= a.title
+                      td
+                        a(href=`/movie/`+a.id)= a.year
+                      td
+                        a(href=`/movie/`+a.id)= a.cast
+                      td
+                        a(href=`/movie/`+a.id)= a.genres
+                      td 
+                          button.w3-button.w3-circle.w3-blue-grey(onclick="deleteItem('" + a._id + "')") Apagar
+        footer.w3-container.w3-teal
+            address Gerado por gestão de Filmes App
+                

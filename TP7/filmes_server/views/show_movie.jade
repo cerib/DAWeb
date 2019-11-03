@@ -1,0 +1,22 @@
+extends layout
+block content
+  .w3-card-4.w3-margin
+    header.w3-container.w3-teal
+        h3 Mostrar/ Editar Filme
+          .w3-container
+              label
+                b Título
+              input.w3-input.w3-border(type='text' name='title' required value=movie.title)
+              label
+                b Ano 
+              input.w3-input.w3-border(type='text' name='year' required value=movie.year)
+              label
+                b Elenco (separar por vírgulas)
+              input.w3-input.w3-border(type='text' name='cast' value=movie.cast)
+              label
+                b Géneros (separar por vírgulas)
+              input.w3-input.w3-border(type='text' name='genres' value=movie.genres)
+              button.w3-button.w3-circle.w3-blue-grey(onclick=`updateItem('${movie._id}')`) Actualizar
+    footer.w3-container.w3-teal
+      a(href="/") Voltar à Página Inicial
+      address Gerado por Gestão de Filmes App
