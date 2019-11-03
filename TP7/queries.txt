@@ -1,0 +1,8 @@
+Quantos filmes de cada género
+db.filmes.aggregate([{$unwind: "$genres"}, {$group: {_id: "$genres", count: {$sum:1}}}])
+
+Filmes do género Drama
+db.movies.aggregate([{$unwind: "$genres"}, {$group: {_id: "$genres", movies: {$push: "$title"}}}, {$match: {_id: "Drama"}}])
+
+Lista de actores que participaram em filmes de comédia
+db.movies.aggregate([{$unwind: "$genres"}, {$match: {genres: "Comedy"}}, {$unwind: "$cast"}, {$group: {_id: "$genres", cast: {$addToSet: "$cast"}}}])
