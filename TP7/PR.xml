@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr>
+<pr>
+    <metadata>
+        <keyname>MIEI DWeb1920</keyname>
+        <title>TP7</title>
+        <supervisor homepage="http://www4.di.uminho.pt/~jcr/">Prof. José Carlos Ramalho</supervisor>
+        <bdate>2019/11/01</bdate>
+        <edate>2019/11/03</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>A79014</identifier>
+            <name>César Ribeiro</name>
+            <email>a79014@alunos.uminho.pt</email>
+            <git>https://www.github.com/cerib/DAWeb/</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p><b>Resolução do tpc 7</b>  - neste TPC foi pedido para criarmos um server de filmes e fazer o CRUD de filmes numa BD usando mongoDB e o módulo mongoose</p>
+        <p>Utilizei Express e Jade (Pug) para fazer o exercício. Todos os filmes existentes são mostrados na página inicial, juntamente com o formulário de submissão de 
+        um novo filme. Para visualizar ou editar um filme, basta clicar no link presente na linha da tabela, onde este se encontra.</p>
+        <p>O comportamento deste servidor é muito parecido ao do TP6, com a diferença de estar a ser usado o mongodb.</p>
+        <p><b>Quanto ao TPC das queries</b>, as respostas estão no ficheiro queries.txt</p>
+    </abstract>
+
+    <deliverables>
+        <deliverable path="./PR.xml">PR.xml</deliverable>
+        <deliverable path="./PR.html">PR.html</deliverable>
+        <deliverable path="./PR.xsl">PR.xsl</deliverable>
+        <deliverable path="./filmes_server">Pasta com os ficheiros do servidor</deliverable>
+        <deliverable path="./queries.txt">Ficheiro de texto com as respotas às queries pedidas pelo professor na aula</deliverable>
+    </deliverables>
+</pr>
