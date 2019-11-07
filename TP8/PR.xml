@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr>
+<pr>
+    <metadata>
+        <keyname>MIEI DWeb1920</keyname>
+        <title>TP8</title>
+        <supervisor homepage="http://www4.di.uminho.pt/~jcr/">Prof. José Carlos Ramalho</supervisor>
+        <bdate>2019/11/07</bdate>
+        <edate>2019/11/07</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>A79014</identifier>
+            <name>César Ribeiro</name>
+            <email>a79014@alunos.uminho.pt</email>
+            <git>https://www.github.com/cerib/DAWeb/</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p><b>Resolução do tpc 8</b>  - neste TPC foi pedido para criarmos uma api de dados que devolva em JSON informações sobre premiados Nobel.</p>
+        <p>Não desenvolvi interface gráfica porque não foi pedido, e para testar usei o Postman</p>
+    </abstract>
+
+    <deliverables>
+        <deliverable path="./PR.xml">PR.xml</deliverable>
+        <deliverable path="./PR.html">PR.html</deliverable>
+        <deliverable path="./PR.xsl">PR.xsl</deliverable>
+        <deliverable path="./nobel">Pasta com os ficheiros do servidor</deliverable>
+    </deliverables>
+</pr>
