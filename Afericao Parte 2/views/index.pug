@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  div(class="container mt-5")
+    h1(class="text-center") Entidades governamentais 
+      small(class="text-muted") - CLAV API
+    table(class="table mt-5")
+      thead(class="thead-dark")
+        tr
+          th Designacao
+          th Estado
+          th Sigla
+          th Sioe
+          th Id
+      each ent in entidades
+        tr
+          td
+            a(href=ent.id)= ent.designacao
+          td= ent.estado
+          td= ent.sigla
+          td= ent.sioe
+          td= ent.id
+  
