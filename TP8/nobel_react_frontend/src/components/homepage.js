@@ -2,8 +2,11 @@ import React from "react";
 import axios from "axios";
 import uniqid from "uniqid";
 
+import { Link } from "react-router-dom";
+
 import Spinner from "react-bootstrap/Spinner";
 import Table from "react-bootstrap/Table";
+
 export default class Homepage extends React.Component {
   constructor(props) {
     super(props);
@@ -20,9 +23,7 @@ export default class Homepage extends React.Component {
     axios
       .get(_url)
       .then(response => {
-        this.setState({ entities: response.data, entitiesLoaded: true }, () =>
-          console.log(this.state.entities)
-        );
+        this.setState({ entities: response.data, entitiesLoaded: true });
       })
       .catch(err => console.log("ERRO!! " + err));
   }
@@ -32,7 +33,7 @@ export default class Homepage extends React.Component {
       return (
         <tr key={uniqid()}>
           <td>
-            <a href={`/${entity.id}`}>{entity.designacao}</a>
+            <Link to={`/detail/${entity.id}`}>{entity.designacao}</Link>
           </td>
           <td>{entity.sigla}</td>
           <td>{entity.estado}</td>
