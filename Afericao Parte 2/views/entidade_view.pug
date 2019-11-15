@@ -1,0 +1,53 @@
+extends layout
+block content
+    div(class="container mt-5")
+        h1 Detalhes da entidade #{entidade.designacao}
+    div(class="container mt-5")
+        h5(class="mt-5") Descrição da entidade
+        table(class="table")
+            thead(class="thead-dark")
+                tr
+                  th(scope="col") Designacao
+                  th(scope="col") Estado
+                  th(scope="col") Sigla
+                  th(scope="col") Sioe
+                  th(scope="col") Internacional
+            tr
+              td= entidade.designacao
+              td= entidade.estado
+              td= entidade.sigla
+              td= entidade.sioe
+              td= entidade.internacional
+        h5(class="mt-5") Tipologias a que pertence
+        table(class="table")
+            thead(class="thead-dark")
+                tr
+                  th(scope="col") Designacao
+                  th(scope="col") Sigla
+                  th(scope="col") Id
+            each tip in tipologias
+                tr
+                  td= tip.designacao
+                  td= tip.sigla
+                  td= tip.id
+        h5(class="mt-5") Processos das quais é dono
+        table(class="table")
+            thead(class="thead-dark")
+                tr
+                  th(scope="col") Titulo
+                  th(scope="col") Codigo
+            each proc in dono
+                tr
+                  td= proc.titulo
+                  td= proc.codigo
+        h5(class="mt-5") Processos das quais é participante
+        table(class="table")
+            thead(class="thead-dark")
+                tr
+                  th(scope="col") Titulo
+                  th(scope="col") Codigo
+            each proc in participa
+                tr
+                  td= proc.titulo
+                  td= proc.codigo
+        
