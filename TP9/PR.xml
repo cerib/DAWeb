@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr>
+<pr>
+    <metadata>
+        <keyname>MIEI DWeb1920</keyname>
+        <title>TP9</title>
+        <supervisor homepage="http://www4.di.uminho.pt/~jcr/">Prof. José Carlos Ramalho</supervisor>
+        <bdate>2019/11/17</bdate>
+        <edate>2019/11/17</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>A79014</identifier>
+            <name>César Ribeiro</name>
+            <email>a79014@alunos.uminho.pt</email>
+            <git>https://www.github.com/cerib/DAWeb/</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p><b>Resolução do tpc 9</b>  - neste TPC foi pedido para ser feito em javascript o "mongoimport" do mongo. Para executar o programa é só fazer, no mesmo directório do programa, 
+        <b>node ./mongoimport.js -d nome_bd -c nome_collection ./caminho_do_ficheiro_json</b>. Nesta implementação não é necessário indicar se o ficheiro é um array JSON 
+            com o comando "--jsonArray", essa detecção é feita automaticamente.</p>
+        <p><b>Importante: </b>é necessário instalar os módulos <b>jsonfile</b> e <b>mongoose</b></p>
+    </abstract>
+
+    <deliverables>
+        <deliverable path="./PR.xml">PR.xml</deliverable>
+        <deliverable path="./PR.html">PR.html</deliverable>
+        <deliverable path="./PR.xsl">PR.xsl</deliverable>
+        <deliverable path="./mongoimport.js">Ficheiro com o código</deliverable>
+        <deliverable path="./movies.json">Ficheiro json de teste, com dados de filmes de hollywood</deliverable>
+        <deliverable path="./jsondata.json">Ficheiro json de teste, criado por mim</deliverable>
+    </deliverables>
+</pr>
