@@ -1,0 +1,22 @@
+[
+  {
+    "person": "jake",
+    "does": "bake"
+  },
+  {
+    "person": "mary",
+    "does": "carry"
+  },
+  {
+    "person": "paul",
+    "does": "haul"
+  },
+  {
+    "person": "ariana",
+    "does": "''''sing'''''"
+  },
+  {
+    "person": "pedro",
+    "does": "play"
+  }
+]
