@@ -29,11 +29,11 @@ router.post("/ficheiros", upload.array("ficheiro"), function(req, res) {
 
     let data = new Date();
 
-    console.log(req.body.desc[index]);
+    console.log(req.body.dsc[index]);
 
     let novoFicheiro = new Ficheiro({
       data: data.toISOString(),
-      desc: req.body.desc[index],
+      desc: req.body.dsc[index],
       name: file.originalname,
       mimetype: file.mimetype,
       size: file.size
@@ -60,7 +60,7 @@ router.post("/ficheiros", upload.array("ficheiro"), function(req, res) {
 
   let novoFicheiro = new Ficheiro({
     data: data.toISOString(),
-    desc: req.body.desc,
+    desc: req.body.dsc,
     name: req.file.originalname,
     mimetype: req.file.mimetype,
     size: req.file.size
