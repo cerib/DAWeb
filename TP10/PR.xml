@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr>
+<pr>
+    <metadata>
+        <keyname>MIEI DWeb1920</keyname>
+        <title>TP9</title>
+        <supervisor homepage="http://www4.di.uminho.pt/~jcr/">Prof. José Carlos Ramalho</supervisor>
+        <bdate>2019/11/24</bdate>
+        <edate>2019/11/24</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>A79014</identifier>
+            <name>César Ribeiro</name>
+            <email>a79014@alunos.uminho.pt</email>
+            <git>https://www.github.com/cerib/DAWeb/</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p><b>Resolução do tpc 10</b>  - neste TPC foi pedido para adaptar o código feito na aula para suportar o upload de vários ficheiros em simultâneo</p>
+    </abstract>
+
+    <deliverables>
+        <deliverable path="./PR.xml">PR.xml</deliverable>
+        <deliverable path="./PR.html">PR.html</deliverable>
+        <deliverable path="./PR.xsl">PR.xsl</deliverable>
+        <deliverable path="./gficheiros">Ficheiros do servidor</deliverable>
+    </deliverables>
+</pr>
