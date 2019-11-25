@@ -10,7 +10,7 @@ block content
         .w3-container(id='f1')
           .w3-cell-row
             label.w3-cell Descrição:
-            input.w3-input.w3-cell.w3-border(type="text" name="dsc")
+            input.w3-input.w3-cell.w3-border(type="text" name="desc")
           .w3-cell-row
             label.w3-cell Ficheiro:
             input.w3-input.w3-cell(type="file" name="ficheiro")
@@ -37,7 +37,7 @@ block content
               td= f.data
               td= f.desc
               td= f.mimetype
-              td= f.name
+              td= f.originalname
               td= f.size
       else
         p Não tem nenhum ficheiro armazenado
