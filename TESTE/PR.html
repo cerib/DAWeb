@@ -1,88 +1,96 @@
 <html>
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Project Record</title>
-      <meta charset="UTF8">
-   </head>
-   <body>
-      
-      <h1>MIEI DWeb1920 - Teste</h1>
-      <table>
-         <tr>
-            <td><b>Key name: </b>MIEI DWeb1920
-            </td>
-            <td><b>Begin date: </b>2020/01/16
-            </td>
-         </tr>
-         <tr>
-            <td><b>Title: </b>Teste
-            </td>
-            <td><b>End date: </b>2020/1/16
-            </td>
-         </tr>
-         <tr>
-            <td></td>
-            <td><b>Supervisor: </b><a href="http://www4.di.uminho.pt/~jcr/">Prof. José Carlos Ramalho</a></td>
-         </tr>
-      </table>
-      <hr>
-      
-      <ul>
-         <li>
-            <p>Nome: César Ribeiro</p>
-            <p>Número: A79014</p>
-            <p>Email: a79014@alunos.uminho.pt</p>
-            <p>Git: <a href="https://www.github.com/cerib/DAWeb/">https://www.github.com/cerib/DAWeb/</a></p>
-         </li>
-      </ul>
-      <hr>
-      
-      
-      <p><b><b>Resolucao do exercicio 1</b></b></p>
-      
-      <p>Neste exrcicio usei <a href="https://www.freeformatter.com/xml-to-json-converter.html"> este site </a> para converter o XML em JSON
-      </p>
-      
-      <p>Depois para colocar no mongo e usar no servidor, usei este comando (monoimport): <b><b>mongoimport -d testedaweb -c musicas --jsonArray dataset.json</b></b></p>
-      
-      
-      <p><b><b>Resolucao do exercicio 2</b></b></p>
-      
-      <p>1: Estão catalogados 549 entidades</p>
-      
-      <p>2: ent_ACT pertence a 2 tipologias, "Administração Pública" e "Autoridades de supervisão
-         e fiscalização"
-      </p>
-      
-      <p>3: ent_ANSR é participa como iniciador do seguinte processo: "Registo nacional de
-         condutores"
-      </p>
-      
-      <p>4: ent_CMiL é dona de: "Realização de atividades de formação e treino animal"</p>
-      
-      <p></p>
-      
-      <p><b><b>Como pedido, coloquei um link para cada ID de tipologia dentro da página dos processos,
-               que consulta a API. Decidi como extra criar uma página web para visualizar esses dados,
-               em vez de apresentar apenas JSON.</b></b></p>
-      
-      <p>Dentro da página de detalhe das tipologias, quando aparece um link com o id de um
-         processo, também tem um link para visitar esse processo
-      </p>
-      
-      
-      
-      
-      <hr>
-      <ul>
-         <li><a href="./PR.xml">PR.xml</a></li>
-         <li><a href="./PR.html">PR.html</a></li>
-         <li><a href="./exercicio_1/mongoimport_comando.txt">Comando mongoimport</a></li>
-         <li><a href="./exercicio_1/dataset.json">Dataset convertido e tratado para usar no mongoimport</a></li>
-         <li><a href="./exercicio_1/respostas_queries.txt">Respostas às queries para usar no exercicio 1</a></li>
-         <li><a href="./exercicio_1/arquivomusica">Ficheiros servidor exercicio 1</a></li>
-         <li><a href="./exercicio_2">Pasta com ficheiros do servidor do exercício 2</a></li>
-      </ul>
-      
-   </body>
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>Project Record</title>
+   <meta charset="UTF8">
+</head>
+
+<body>
+
+   <h1>MIEI DWeb1920 - Teste</h1>
+   <table>
+      <tr>
+         <td><b>Key name: </b>MIEI DWeb1920
+         </td>
+         <td><b>Begin date: </b>2020/01/16
+         </td>
+      </tr>
+      <tr>
+         <td><b>Title: </b>Teste
+         </td>
+         <td><b>End date: </b>2020/1/16
+         </td>
+      </tr>
+      <tr>
+         <td></td>
+         <td><b>Supervisor: </b><a href="http://www4.di.uminho.pt/~jcr/">Prof. José Carlos Ramalho</a></td>
+      </tr>
+   </table>
+   <hr>
+
+   <ul>
+      <li>
+         <p>Nome: César Ribeiro</p>
+         <p>Número: A79014</p>
+         <p>Email: a79014@alunos.uminho.pt</p>
+         <p>Git: <a href="https://www.github.com/cerib/DAWeb/">https://www.github.com/cerib/DAWeb/</a></p>
+      </li>
+   </ul>
+   <hr>
+
+
+   <p><b><b>Resolucao do exercicio 1</b></b></p>
+
+   <p>Neste exrcicio usei <a href="https://www.freeformatter.com/xml-to-json-converter.html"> este site </a> para
+      converter o XML em JSON. Tive o cuidado de verificar que todos os itens "instrumentos" eram arrays de objectos, já
+      que por vezes os
+      conversores
+      podem tornar campos com apenas um child em objectos de objectos.
+   </p>
+
+   <p>Depois para colocar no mongo e usar no servidor, usei este comando (monoimport): <b><b>mongoimport -d testedaweb
+            -c musicas --jsonArray dataset.json</b></b></p>
+
+
+   <p><b><b>Resolucao do exercicio 2</b></b></p>
+
+   <p>1: Estão catalogados 549 entidades</p>
+
+   <p>2: ent_ACT pertence a 2 tipologias, "Administração Pública" e "Autoridades de supervisão
+      e fiscalização"
+   </p>
+
+   <p>3: ent_ANSR é participa como iniciador do seguinte processo: "Registo nacional de
+      condutores"
+   </p>
+
+   <p>4: ent_CMiL é dona de: "Realização de atividades de formação e treino animal"</p>
+
+   <p></p>
+
+   <p><b><b>Como pedido, coloquei um link para cada ID de tipologia dentro da página dos processos,
+            que consulta a API. Decidi como extra criar uma página web para visualizar esses dados,
+            em vez de apresentar apenas JSON.</b></b></p>
+
+   <p>Dentro da página de detalhe das tipologias, quando aparece um link com o id de um
+      processo, também tem um link para visitar esse processo
+   </p>
+
+
+
+
+   <hr>
+   <ul>
+      <li><a href="./PR.xml">PR.xml</a></li>
+      <li><a href="./PR.html">PR.html</a></li>
+      <li><a href="./exercicio_1/mongoimport_comando.txt">Comando mongoimport</a></li>
+      <li><a href="./exercicio_1/dataset.json">Dataset convertido e tratado para usar no mongoimport</a></li>
+      <li><a href="./exercicio_1/respostas_queries.txt">Respostas às queries para usar no exercicio 1</a></li>
+      <li><a href="./exercicio_1/arquivomusica">Ficheiros servidor exercicio 1</a></li>
+      <li><a href="./exercicio_2">Pasta com ficheiros do servidor do exercício 2</a></li>
+   </ul>
+
+</body>
+
 </html>

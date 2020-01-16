@@ -18,7 +18,7 @@
     </workteam>
     <abstract>
         <p><b>Resolucao do exercicio 1</b></p>
-        <p>Neste exrcicio usei <xref url="https://www.freeformatter.com/xml-to-json-converter.html"> este site </xref> para converter o XML em JSON</p>
+        <p>Neste exrcicio usei <xref url="https://www.freeformatter.com/xml-to-json-converter.html"> este site </xref> para converter o XML em JSON. Tive o cuidado de verificar que todos os itens "instrumentos" eram arrays de objectos, já que por vezes os conversores podem tornar campos com apenas um child em objectos de objectos.</p>
         <p>Depois para colocar no mongo e usar no servidor, usei este comando (monoimport): <b>mongoimport -d testedaweb -c musicas --jsonArray dataset.json</b></p>
         
         <p><b>Resolucao do exercicio 2</b></p>
