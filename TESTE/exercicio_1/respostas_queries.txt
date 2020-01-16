@@ -14,3 +14,4 @@ db.musicas.find({"compositor": "NOME COMPOSITOR"})
 db.musicas.find({"instrumentos": {$elemMatch: {"designacao": "NOME INSTRUMENTO"}}})
 
 //Devolve uma lista de obras musicais com os seguintes campos: id, titulo, partituras (número de partituras disponíveis);
+db.musicas.aggregate([{$project: {_id: 0, id: 1, titulo: 1, num_partituras: {$cond: {if: {$isArray: "$instrumentos"}, then: {$size: "$instrumentos"}, else: 0}}}}])

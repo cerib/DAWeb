@@ -21,6 +21,15 @@ router.get("/teste", async function(req, res, next) {
 });
 */
 
+router.get("/obrasQuant", async function(req, res, next) {
+  try {
+    res.jsonp(await Musicas.obrasQuant());
+  } catch (error) {
+    console.log(error);
+    res.sendStatus(400);
+  }
+});
+
 router.get("/obras", async function(req, res, next) {
   try {
     if (req.query.compositor) {

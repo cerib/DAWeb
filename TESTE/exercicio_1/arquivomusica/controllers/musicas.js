@@ -22,6 +22,25 @@ module.exports.findByInstrument = instrument => {
   });
 };
 
+module.exports.obrasQuant = () => {
+  return Musicas.aggregate([
+    {
+      $project: {
+        _id: 0,
+        id: 1,
+        titulo: 1,
+        num_partituras: {
+          $cond: {
+            if: { $isArray: "$instrumentos" },
+            then: { $size: "$instrumentos" },
+            else: 0
+          }
+        }
+      }
+    }
+  ]);
+};
+
 module.exports.teste = () => {
   return Musicas.find({}, { instrumentos: 1 });
 };
