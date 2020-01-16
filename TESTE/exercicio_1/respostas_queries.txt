@@ -1,0 +1,16 @@
+//Devolve a lista de obras musicais apenas com os campos "id", "titulo", "tipo" e "compositor";
+db.musicas.find({}, {"_id": 0, "id": 1, "titulo": 1, "compositor": 1, "tipo": 1})
+
+//Devolve a informação completa de uma obra; (por id)
+db.musicas.find({"id": "IDDAOBRA"})
+
+//Devolve a lista de tipos, sem repetições;
+db.musicas.distinct("tipo")
+
+//Devolve a lista de obras que tenham o campo "compositor" com o valor "XXX";
+db.musicas.find({"compositor": "NOME COMPOSITOR"})
+
+//Devolve a lista de obras que tenham uma ou mais partituras para o instrumento III;
+db.musicas.find({"instrumentos": {$elemMatch: {"designacao": "NOME INSTRUMENTO"}}})
+
+//Devolve uma lista de obras musicais com os seguintes campos: id, titulo, partituras (número de partituras disponíveis);

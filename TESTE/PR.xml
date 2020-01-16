@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/C:/Users/C/Desktop/DAWeb/TP3/pr.dtd">
+<pr>
+    <metadata>
+        <keyname>MIEI DWeb1920</keyname>
+        <title>Teste</title>
+        <supervisor homepage="http://www4.di.uminho.pt/~jcr/">Prof. José Carlos Ramalho</supervisor>
+        <bdate>2020/01/16</bdate>
+        <edate>2020/1/16</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>A79014</identifier>
+            <name>César Ribeiro</name>
+            <email>a79014@alunos.uminho.pt</email>
+            <git>https://www.github.com/cerib/DAWeb/</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p><b>Resolucao do exercicio 1</b></p>
+        <p>Neste exrcicio usei <xref url="https://www.freeformatter.com/xml-to-json-converter.html"> este site </xref> para converter o XML em JSON</p>
+        <p>Depois para colocar no mongo e usar no servidor, usei este comando (monoimport): <b>mongoimport -d testedaweb -c musicas --jsonArray dataset.json</b></p>
+        
+        <p><b>Resolucao do exercicio 2</b></p>
+        <p>1: Estão catalogados 549 entidades</p>
+        <p>2: ent_ACT pertence a 2 tipologias, "Administração Pública" e "Autoridades de supervisão e fiscalização"</p>
+        <p>3: ent_ANSR é participa como iniciador do seguinte processo: "Registo nacional de condutores"</p>
+        <p>4: ent_CMiL é dona de: "Realização de atividades de formação e treino animal"</p>
+        <p></p>
+        <p><b>Como pedido, coloquei um link para cada ID de tipologia dentro da página dos processos, que consulta a API. Decidi como extra criar uma página web para visualizar esses dados, em vez de apresentar apenas JSON.</b></p>
+        <p>Dentro da página de detalhe das tipologias, quando aparece um link com o id de um processo, também tem um link para visitar esse processo</p>
+        
+    </abstract>
+
+    <deliverables>
+        <deliverable path="./PR.xml">PR.xml</deliverable>
+        <deliverable path="./PR.html">PR.html</deliverable>
+        <deliverable path="./exercicio_1/mongoimport_comando.txt">Comando mongoimport</deliverable>
+        <deliverable path="./exercicio_1/dataset.json">Dataset convertido e tratado para usar no mongoimport</deliverable>
+        <deliverable path="./exercicio_1/respostas_queries.txt">Respostas às queries para usar no exercicio 1</deliverable>
+        <deliverable path="./exercicio_1/arquivomusica">Ficheiros servidor exercicio 1</deliverable>
+        <deliverable path="./exercicio_2">Pasta com ficheiros do servidor do exercício 2</deliverable>
+    </deliverables>
+</pr>

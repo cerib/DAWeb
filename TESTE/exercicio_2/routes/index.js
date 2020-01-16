@@ -14,6 +14,24 @@ router.get("/", function(req, res, next) {
     .catch(err => console.log("ERRO!! " + err));
 });
 
+router.get("/tipologia/:id", (req, res, next) => {
+  let urlTipologia = `http://clav-api.dglab.gov.pt/api/tipologias/${req.params.id}?apikey=${apikey}`;
+  let urlGetEntidades = `http://clav-api.dglab.gov.pt/api/tipologias/${req.params.id}/elementos?apikey=${apikey}`;
+  axios
+    .all([axios.get(urlTipologia), axios.get(urlGetEntidades)])
+    .then(
+      axios.spread((tipologia, entidades) => {
+        //console.log(tipologia.data);
+        //console.log(entidades.data);
+        res.render("tipologia_view", {
+          entidades: entidades.data,
+          tipologia: tipologia.data
+        });
+      })
+    )
+    .catch(error => console.log(error));
+});
+
 router.get("/:id", (req, res, next) => {
   let urlEnt = `http://clav-api.dglab.gov.pt/api/entidades/${req.params.id}?apikey=${apikey}`;
   let urlTipo = `http://clav-api.dglab.gov.pt/api/entidades/${req.params.id}/tipologias?apikey=${apikey}`;

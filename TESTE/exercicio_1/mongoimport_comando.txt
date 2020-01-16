@@ -1,0 +1,1 @@
+mongoimport -d testedaweb -c musicas --jsonArray dataset.json

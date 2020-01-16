@@ -1,0 +1,33 @@
+extends layout
+block content
+    div(class="container mt-5")
+      a.btn.btn-primary(type="button" href="/") Página Inicial
+      br
+      button.btn.btn-secondary.mt-2(type="button" onclick="javascript:history.back()") Voltar
+    div(class="container mt-5")
+        h1 Detalhes da tipologia #{tipologia.designacao}
+    div(class="container mt-5")
+        h5(class="mt-5") Descrição da tipologia
+        table(class="table")
+            thead(class="thead-dark")
+                tr
+                  th(scope="col") Estado
+                  th(scope="col") Sigla
+                  th(scope="col") Designacao
+            tr
+              td= tipologia.estado
+              td= tipologia.sigla
+              td= tipologia.designacao
+        h5(class="mt-5") Entidades que lhe pertencem
+        table(class="table")
+            thead(class="thead-dark")
+                tr
+                  th(scope="col") Sigla
+                  th(scope="col") Designacao
+                  th(scope="col") Id
+            each entidade in entidades
+                tr
+                  td= entidade.sigla
+                  td= entidade.designacao
+                  td
+                    a(href="http://localhost:7777/" + entidade.id)=entidade.id
